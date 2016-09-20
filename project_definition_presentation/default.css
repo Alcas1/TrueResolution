@@ -308,6 +308,11 @@ ul li{
   font-family: 'opensans';
 }
 
+.slide-content-small{
+  font-size: 1.8vw;
+  line-height: 2.5vw;
+}
+
 
 .header-image{
   padding-top: 100px;

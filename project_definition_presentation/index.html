@@ -59,7 +59,6 @@
 					<ul>
 						<li>Jonathan Wu</li>
 						<li>Peter Schaedler</li>
-						<li>Hope</li>
 					</ul>
 					
 				</div>
@@ -76,7 +75,7 @@
 						<ul>
 							<li>Yinzhi Cao</li>
 							<li>Assistant Professor at Lehigh University</li>
-							<li>Research interests in Cyber security and privacy issues in Web, Mobile, Machine Learning and Payment Systems</li>
+							<li>Research interests include cyber security, privacy issues in web/mobile, machine learning, and payment systems</li>
 						</ul>
 					</div>
 					<div class="slide-right"><img class="image-half" src="http://yinzhicao.org/Pic/pic2.jpg"></div>
@@ -91,11 +90,11 @@
 				<div class="slide-content">	
 					<div class="slide-left">
 						<ul>
-							<li>User Fingerprinting</li>
-							<li>Figure out the user's true browser resolution</li>
-							<li>Figure out the user's GPU(Graphics Processing Unit)</li>
-							<li>Integrate with other fingerprinting methods</li>
-							<li>Uses: 2FA, Analytics, Security</li>
+							<li>Cross-browser screen resolution detection</li>
+							<li>GPU model detection</li>
+							<li>Use as methods of user fingerprinting</li>
+							<li>Integrate with Prof. Cao's pre-existing research</li>
+							<li>Uses: 2FA, analytics, security</li>
 						</ul>
 					</div>
 					<div class="slide-right">
@@ -113,8 +112,9 @@
 					<div class="slide-left">	
 						<ul>
 							<li>Browsers do not reveal the actual resolution</li>
-							<li>True resolution can be used for better web pages,  </li>
-							<li>Change elements on screen and sizes</li>
+							<li>Given JS variables may change from page zoom, multiple monitors, or scaled resolutions</li>
+							<li>Finding true resolution can allow for more responsive web pages or user fingerprinting</li>
+							<li>Attempting to find by finding ratios of fixed nested div elements</li>
 						</ul>
 					</div>
 					<div class="slide-right">
@@ -126,14 +126,39 @@
 		<div class="slide" title="">
 			<div class="slide-body">
 				<div class="slide-header-full">
-					 Finding GPU model
+					 Finding GPU Model
 				</div>
 				<div class="slide-content">
 					<div class="slide-left">	
 						<ul>
 							<li>Some browsers have started hiding GPU models</li>
-							<li>To be added as another way to fingerprint users</li>
-							<li>Use scikit-learn in python to identify correct GPU</li>
+							<li>Can be used as another way to fingerprint users</li>
+							<li>Use scikit-learn in Python to identify correct GPU from pre-existing image renderings in browser</li>
+						</ul>
+					</div>
+					<div class="slide-right">
+					<a class="zoom" href="nvidia.jpg" data-smoothzoom="lower"><img class="slide-image" src="nvidia.jpg" alt="Graphics Cards"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="slide-body">
+				<div class="slide-header-full">
+					 Deliverables and Requirements
+				</div>
+				<div class="slide-content">
+					<div class="slide-left">	
+						<ul>
+							<li>Minimum requirement: a website with a zoom detection algorithm</li>
+							<li>Other goals:</li>
+							<ul>
+								<li>98% accuracy on resolution-detection</li>
+								<li>Take into account multiple monitors/scaled resolutions</li>
+								<li>Integrate with Prof. Cao's research website</li>
+								<li>Use scikit-learn in Python to identify correct GPU from pre-existing image renderings in browser</li>
+							</ul>
+							
 						</ul>
 					</div>
 					<div class="slide-right">

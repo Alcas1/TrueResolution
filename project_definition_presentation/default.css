@@ -204,6 +204,8 @@ section {
   text-rendering: optimizeLegibility;
 }
 
+
+
 #down-nav{
   background-color: rgba(33, 33, 33, .35);
 
@@ -355,6 +357,10 @@ ol li{
   right:0;
   width:5px;
   /*background-color: #107895;*/
+}
+
+.image-half{
+  width:50%;
 }
 
 

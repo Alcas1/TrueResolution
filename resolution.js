@@ -55,7 +55,7 @@ $(document).ready(function(){
 	};
 
 	var perceivedHRes = document.body.clientWidth;
-	var realHRes      = 1920;
+	var realHRes      = 1920; // NOTE: CHANGE THIS TO YOUR HORIZONTAL RESOLUTION
 	var zoomLevel1    = getZoom1(($("#test").width() / $("#inner1").width()));
 	var zoomLevel2    = getZoom2(($("#test").width() / $("#inner1").width() / 1.2695417789757413));
 	var adjustedHRes1 = getHRes(perceivedHRes, zoomLevel1);

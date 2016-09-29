@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 	// console.log($("#test").width());
 	// console.log($("#test").height());
@@ -40,8 +38,6 @@ $(document).ready(function(){
 	/* Peter work from 9/27 -- determine horinzontal screen resolution and
 	/*     and percent error
 	/* ===================================================================== */
-
-	/* Add variable percentages from 1% to 99% and average results
 
 	/* Zoom function determined from Excel regression - unadjusted width */
 	var getZoom1 = function (x) {

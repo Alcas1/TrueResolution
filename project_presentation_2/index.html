@@ -1,0 +1,189 @@
+
+<html>
+
+<div id="page-1">
+
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="smoothzoom.css" />
+		<link rel="stylesheet" type="text/css" href="default.css" />
+		<script
+			  src="jquery.min.js"></script>
+			  <script src="jquery.waypoints.min.js"></script>
+		<script src="jquery.animate-colors-min.js"></script>
+		<script type="text/javascript" src="easing.js"></script>
+		<script type="text/javascript" src="smoothzoom.min.js"></script>
+		<script src="index.js" type="text/javascript"></script> 
+	</head>
+
+
+	<div class="header">
+		<div class="top-bar noselect">
+			User Fingerprinting
+			<div class="fixed-box">
+				<div class="fixed-text"></div>
+			</div>
+			<div class="fixed-hovers">
+				<!-- <div class="empty"></div> -->
+			</div>
+		</div>
+		<div id="header-bottom">
+			<img id="down-arrow" src="down-arrow.png" height="36" width="40"> 
+		</div>
+		
+	</div>
+	<div id="slide-nav">
+		<div id="up-nav">
+			 <img src="up.png" height="36" width="36"> 
+		</div>
+		<div id="disp-nav">
+			1/2
+		</div>
+		<div id="down-nav">
+			 <img src="down.png" height="36" width="36"> 
+		</div>
+
+	</div>
+	<body>
+		<div class="slide" title="">
+			<div class="center-slide">
+				PROJECT DEFINITION
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="slide-body">
+				<div class="slide-header">
+					Team Members
+				</div>
+				<div class="slide-content">
+					<div class="slide-left">
+						<ul>
+							<li>Jonathan Wu</li>
+							<li>Peter Schaedler</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="slide-body">
+				<div class="slide-header-full">
+					Client
+				</div>
+				<div class="slide-content">
+					<div class="slide-left">
+						
+						<ul>
+							<li>Yinzhi Cao</li>
+							<li>Assistant Professor at Lehigh University</li>
+							<li>Research interests include cyber security, privacy issues in web/mobile, machine learning, and payment systems</li>
+						</ul>
+					</div>
+					<div class="slide-right"><img class="image-half" src="http://yinzhicao.org/Pic/pic2.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="slide-body">
+				<div class="slide-header-full">
+					Project
+				</div>
+				<div class="slide-content">	
+					<div class="slide-left">
+						<ul>
+							<li>Cross-browser screen resolution detection</li>
+							<li>GPU model detection</li>
+							<li>Use as methods of user fingerprinting</li>
+							<li>Integrate with Prof. Cao's pre-existing research</li>
+							<li>Uses: 2FA, analytics, security</li>
+						</ul>
+					</div>
+					<div class="slide-right">
+						<img class="image-half" src="fingerprint.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="slide-body">
+				<div class="slide-header-full">
+					True Browser Resolution
+				</div>
+				<div class="slide-content">
+					<div class="slide-left">	
+						<ul class="slide-content-small">
+							<li>Browsers do not reveal the actual resolution</li>
+							<li>Given JS variables may change from page zoom, multiple monitors, or scaled resolutions</li>
+							<li>Finding true resolution can allow for more responsive web pages or user fingerprinting</li>
+							<li>Attempting to find by finding ratios of fixed nested div elements</li>
+						</ul>
+					</div>
+					<div class="slide-right">
+					<a class="zoom" href="GoogleResolution.png" data-smoothzoom="lower"><img class="slide-image" src="GoogleResolution.png" alt="Google Resolution"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="slide-body">
+				<div class="slide-header-full">
+					 Finding GPU Model
+				</div>
+				<div class="slide-content">
+					<div class="slide-left">	
+						<ul>
+							<li>Some browsers have started hiding GPU models</li>
+							<li>Can be used as another way to fingerprint users</li>
+							<li>Use scikit-learn in Python to identify correct GPU from pre-existing image renderings in browser</li>
+						</ul>
+					</div>
+					<div class="slide-right">
+					<a class="zoom" href="nvidia.jpg" data-smoothzoom="lower"><img class="slide-image" src="nvidia.jpg" alt="Graphics Cards"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="slide-body">
+				<div class="slide-header-full">
+					 Deliverables and Requirements
+				</div>
+				<div class="slide-content">	
+					<ul>
+						<li>Minimum requirement: a website with a zoom detection algorithm</li>
+						<li>Other goals:</li>
+						<ul>
+							<li>98% accuracy on resolution-detection</li>
+							<li>Take into account multiple monitors/scaled resolutions</li>
+							<li>Integrate with Prof. Cao's research website</li>
+							<li>Identify correct GPU from pre-existing image renderings in browser</li>
+						</ul>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="center-slide">
+				PROJECT PLANNING
+			</div>
+		</div>
+		<div class="slide" title="">
+			<div class="slide-body">
+				<div class="slide-header">
+					Team Members
+				</div>
+				<div class="slide-content">
+					<div class="slide-left">
+						<ul>
+							<li>Jonathan Wu</li>
+							<li>Peter Schaedler</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+<!-- Include extras at the end -->
+</div>
+</html>

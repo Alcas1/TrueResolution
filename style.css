@@ -29,3 +29,20 @@ body {
 	height: 50px;
 	background-color: yellow;
 }
+
+#test4 {
+	position: relative;
+	width: 2000px;
+	height: 200px;
+	background-color: lightblue;
+	overflow: hidden;
+}
+
+#inner2 {
+	position: relative;
+	width: 100vw; /* getBoundingClientRect.width gives an accurate answer for this */
+	height: 100px;
+	/* margin-top: 10px;
+	margin-left: 10px; */
+	background-color: blue;
+}

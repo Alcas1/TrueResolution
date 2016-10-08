@@ -76,4 +76,29 @@ $(document).ready(function(){
 	console.log("Horizontal resolution   = " + adjustedHRes2);
 	console.log("Percent error           = " + percentError2);
 	console.log("=====================================================================");
+
+	// Trying to consolidate a list of all relevant variables
+	var item = document.getElementById("inner2");
+	console.log("Here's some variables for inner2:");
+	console.log("clientHeight = " + item.clientHeight);
+	console.log("clientWidth = " + item.clientWidth);
+	console.log("offsetHeight = " + item.offsetHeight); // height including padding and border, but not margin
+	console.log("offsetWidth = " + item.offsetWidth);
+	console.log("offsetTop = " + item.offsetTop); // offset between top of child and parent
+	console.log("offsetLeft = " + item.offsetLeft); // similar for left side
+	console.log("scrollTop = " + item.scrollTop); // amount of element hidden by scrolling
+	console.log("scrollHeight = " + item.scrollHeight);
+	console.log("scrollWidth = " + item.scrollWidth); // true width of element; bigger than clientWidth if it goes offscreen
+	console.log("more accurate stuff -- getBoundingClientRect() -- run in console");
+	console.log("getBoundingClientRect width = " + item.getBoundingClientRect().width);
+	var doc = document.body;
+	console.log("document.body.clientHeight = " + doc.clientHeight);
+	console.log("document.body.clientWidth = " + doc.clientWidth);
+	console.log("And so on...");
+	var win = window;
+	console.log("window.innerHeight = " + win.innerHeight); // height of viewport
+	console.log("window.outerHeight = " + win.outerHeight); // height of whole browser window
+	console.log("screen.height = " + screen.height); // whole screen
+	console.log("All of these are affected by zoom.")
+
 });

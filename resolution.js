@@ -78,8 +78,8 @@ $(document).ready(function(){
 	console.log("=====================================================================");
 
 	// Trying to consolidate a list of all relevant variables
-	var item = document.getElementById("inner2");
-	console.log("Here's some variables for inner2:");
+	var item = document.getElementById("test4");
+	console.log("Here's some variables for test4:");
 	console.log("clientHeight = " + item.clientHeight);
 	console.log("clientWidth = " + item.clientWidth);
 	console.log("offsetHeight = " + item.offsetHeight); // height including padding and border, but not margin
@@ -97,8 +97,27 @@ $(document).ready(function(){
 	console.log("And so on...");
 	var win = window;
 	console.log("window.innerHeight = " + win.innerHeight); // height of viewport
+	console.log("window.innerWidth = " + win.innerWidth);
 	console.log("window.outerHeight = " + win.outerHeight); // height of whole browser window
+	console.log("window.outerWidth = " + win.outerWidth);
 	console.log("screen.height = " + screen.height); // whole screen
-	console.log("All of these are affected by zoom.")
+	console.log("screen.width = " + screen.width);
+	console.log("All of these are affected by zoom.");
+
+	// document.body.clientWidth will show true viewport width (also window widths)
+	// element clientWidth will give off-screen size as well
+
+	console.log(document.getElementById('test4').getBoundingClientRect().width - document.body.clientWidth);
+	// ^^^ this might be helpful
+
+	// 1 vw = document.documentElement.clientWidth / 100
+
+	// Kevin got 153.59
+	// 1366 x 768
+
+	// Note: can get aspect ratio by screen.width / screen.height
+
+	// Because David's computer also return 192 for 1080p, maybe that means there's a way to determine
+	// resolution without needing the zoom factor... hm. Consider it
 
 });

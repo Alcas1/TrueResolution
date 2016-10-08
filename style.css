@@ -32,7 +32,7 @@ body {
 
 #test4 {
 	position: relative;
-	width: 2000px;
+	width: 110vw;
 	height: 200px;
 	background-color: lightblue;
 	overflow: hidden;
@@ -40,7 +40,7 @@ body {
 
 #inner2 {
 	position: relative;
-	width: 100vw; /* getBoundingClientRect.width gives an accurate answer for this */
+	width: 100vw;
 	height: 100px;
 	/* margin-top: 10px;
 	margin-left: 10px; */

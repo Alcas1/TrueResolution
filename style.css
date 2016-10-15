@@ -2,6 +2,26 @@ body {
 	margin: 0;
 }
 
+#center {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 60%;
+	height: 40%;
+	background-color: #4286f4;
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 5rem;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+}
+
 #test {
 	position: relative;
 	width: 100%;

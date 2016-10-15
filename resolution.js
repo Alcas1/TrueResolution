@@ -7,6 +7,8 @@
 // Safari 10.0
 // Chrome 53.0
 
+"use strict";
+
 // Detect Browser
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 var isFirefox = typeof InstallTrigger !== 'undefined';
@@ -37,6 +39,8 @@ var onresize = function onresize() {
 
 	console.log(hres);
 	console.log(vres);
+
+	document.getElementById("center").innerHTML = hres + " x " + vres;
 }
 
 $(document).ready(function() {

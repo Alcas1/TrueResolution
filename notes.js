@@ -130,3 +130,31 @@ console.log(document.getElementById('test4').getBoundingClientRect().width - doc
 
 // Because David's computer also return 192 for 1080p, maybe that means there's a way to determine
 // resolution without needing the zoom factor... hm. Consider it
+
+
+
+// ===============
+// window.onresize
+// ===============
+// might be useful as an event handler, even if only for testing
+
+// =======================
+// window.devicePixelRatio
+// =======================
+// on firefox, tells if zoomed in or not
+// not sure how values differ, but it definitely shows
+// however, on retina macs, defaults at 2
+// also note: retina macs have 1.5x pixel density, not actually 2x
+
+// ================
+// retina detection
+// ================
+// ((window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches)) || (window.devicePixelRatio && window.devicePixelRatio > 1.3));
+// from http://stackoverflow.com/questions/19689715/what-is-the-best-way-to-detect-retina-support-on-a-device-using-javascript
+// or (from same webpage)
+// function isRetinaDisplay() {
+//     if (window.matchMedia) {
+//         var mq = window.matchMedia("only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen  and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx)");
+//         return (mq && mq.matches || (window.devicePixelRatio > 1)); 
+//     }
+// }

@@ -2,12 +2,6 @@
 // High DPI Detection: http://stackoverflow.com/questions/19689715/what-is-the-best-way-to-detect-retina-support-on-a-device-using-javascript
 // Browser Detection: http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
 
-// Currently tested on:
-// Firefox 49.0.1 (bug at 50% and lower)
-// Safari 10.0
-// Chrome 53.0
-// Opera 40.0
-
 "use strict";
 
 // Detect Browser
@@ -24,11 +18,8 @@ var onresize = function onresize() {
 
 	if (isFirefox) {
 		var pixelRatio = window.devicePixelRatio;
+		var highdpi = window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches);
 
-		// BUG: Stops working on Firefox at zoom 50% and below.
-		// Turns to false for Retina display
-		var highdpi = (window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches)) || (window.devicePixelRatio && window.devicePixelRatio > 1.3);
-		
 		if (highdpi) {
 			pixelRatio /= 2;
 		}
@@ -41,8 +32,7 @@ var onresize = function onresize() {
 		vres = screen.height;
 	}
 
-	console.log(hres);
-	console.log(vres);
+	console.log(hres + " x " + vres);
 
 	document.getElementById("center").innerHTML = hres + " x " + vres;
 }

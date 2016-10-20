@@ -18,26 +18,45 @@ var onresize = function onresize() {
 
 	if (isFirefox) {
 		var pixelRatio = window.devicePixelRatio;
-		var highdpi = window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches);
+		/* var highdpi = window.matchMedia && (window.matchMedia('only screen and (min-resolution: 124dpi), only screen and (min-resolution: 1.3dppx), only screen and (min-resolution: 48.8dpcm)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6/2), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3)').matches);
 
 		if (highdpi) {
 			pixelRatio /= 2;
-		}
+		} */
 
 		hres = Math.round(screen.width * pixelRatio);
 		vres = Math.round(screen.height * pixelRatio);
+	}
+	else if (isIE || isEdge) {
+		var xzoom = screen.deviceXDPI / screen.logicalXDPI;
+		var yzoom = screen.deviceYDPI / screen.logicalYDPI;
+		hres = Math.round(screen.width * xzoom);
+		vres = Math.round(screen.height * yzoom);
+		// Sometimes rounding error would cause it to be 1 pixel off
+		if (hres % 10 == 1 || hres % 10 == 9) {
+			hres = Math.round(hres / 10) * 10;
+		}
+		if (vres % 10 == 1 || vres % 10 == 9) {
+			vres = Math.round(vres / 10) * 10;
+		}
 	}
 	else {
 		hres = screen.width;
 		vres = screen.height;
 	}
 
-	console.log(hres + " x " + vres);
-
 	document.getElementById("center").innerHTML = hres + " x " + vres;
+	if (isIE) {
+		document.getElementById("center").innerHTML += "\nClick to refresh";
+	}
 }
 
-$(document).ready(function() {
-	window.onresize = onresize;
+onload = function() {
+	if (isIE) {
+		document.getElementById("center").onclick = onresize;
+	}
+	else {
+		window.onresize = onresize;
+	}
 	onresize();
-});
+};

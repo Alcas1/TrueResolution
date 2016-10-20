@@ -1,14 +1,18 @@
 # TrueResolution
 A tool to determine the resolution of your screen through your browser that is cross-platform and isn't affected by browser zooming.
 
-Known to work on the following platforms:
+Tested on the following platforms:
 - macOS Sierra
 	- Safari 10.0
 	- Chrome 53.0
 	- Opera 40.0
+	- Firefox 49
 - Windows 10
-	- Chrome
+	- Chrome 53.0
+	- Firefox 46
+	- Internet Explorer 11
+	- Microsoft Edge 38
 
 Known issues:
-- Bug in Firefox 49.0.1 that has trouble determining if you're on a high DPI display
-- Doesn't work in Internet Explorer 11 or Microsoft Edge 38
+- Bug in Firefox 46+ where high DPI displays are not accounted for
+- In Internet Explorer 11 and Microsoft Edge 38, zooming to 10% or lower causes it to show incorrect resolution, and will remain incorrect until you zoom back to 100%

@@ -49,6 +49,17 @@ var onresize = function onresize() {
 	if (isIE) {
 		document.getElementById("center").innerHTML += "\nClick to refresh";
 	}
+
+	var json = {};
+	json.width = hres;
+	json.height = vres;
+	if (!isIE && !isEdge) {
+		json.pixelDensity = window.devicePixelRatio;
+	}
+	else {
+		json.pixelDensity = screen.deviceXDPI / screen.logicalXDPI;
+	}
+	return json;
 }
 
 onload = function() {

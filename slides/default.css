@@ -237,6 +237,16 @@ ul li{
 
 }
 
+.center-slide-white{
+  text-align: center;
+  font-size:55px;
+  position: relative;
+  top: 40%;
+  font-family: 'opensans-light';
+  color:#000;
+}
+
+
 .small-image{
   padding-left: 30px;
   height:32px;

@@ -323,6 +323,11 @@ ul li{
   float:right;
 }
 
+.slide-right-full{
+  width:50%;
+  float:right;
+}
+
 .slide-content{
   line-height: 3vw;
   padding-top: 30px;

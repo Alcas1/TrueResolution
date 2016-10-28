@@ -1,4 +1,7 @@
 # TrueResolution
+
+**NOTE: This repository has mainly been replaced by another which holds the rest of the server-side code for this project. See Alcas1/true-resolution-server on Github.**
+
 A tool to determine the resolution of your screen through your browser that is cross-platform and isn't affected by browser zooming.
 
 Tested on the following platforms:

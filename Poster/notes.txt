@@ -1,0 +1,7 @@
+fonts: 
+josefin-sans
+proxima nova light
+
+design:
+make it clean 
+make it simple

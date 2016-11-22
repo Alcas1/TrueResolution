@@ -115,7 +115,7 @@ section {
 .hovers{
   border-top: solid 1px #d32f2f;
   padding-right: 15px;
-  width:165px;
+  width:230px;
   height:40px;
   /*opacity: 0;*/
 
@@ -139,7 +139,7 @@ section {
   position: fixed;
   top: 0px;
   right: 0px;
-  width:200px;
+  width:300px;
   height:91px;
 }
 

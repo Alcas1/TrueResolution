@@ -75,15 +75,13 @@ var onresize = function onresize() {
 	// Firefox
 	else if (isFirefox) {
 		pixelRatio = window.devicePixelRatio;
-
 		var cookieSetDate = new Date(readCookie("dateSet")); // date cookie was last stored at
 		if (readCookie("initialRatio") === null || cookieSetDate < lastCookieChange) {
 			createCookie("initialRatio", pixelRatio >= 2 ? pixelRatio : 1, 365); // creates a cookie to last for a year
 			var date = new Date();
 			createCookie("dateSet", date.toGMTString(), 365);
 		}
-		pixelRatio /= readCookie("initialRatio");
-
+		pixelRatio /= readCookie("initialRatio") === null ? 1 : readCookie("initialRatio"); // Make sure cookies aren't disabled
 		hres = Math.round(screen.width * pixelRatio); // scaling resolution by zoom factor (pixelRatio)
 		vres = Math.round(screen.height * pixelRatio);
 	}
@@ -113,8 +111,15 @@ var onresize = function onresize() {
 			var date = new Date();
 			createCookie("dateSet", date.toGMTString(), 365);
 		}
-		hres = screen.width * readCookie("initialRatio"); // scaling resolution by zoom factor (value in cookie)
-		vres = screen.height * readCookie("initialRatio");
+		// If cookies are completely disabled
+		if (readCookie("initialRatio") === null) {
+			hres = screen.width;
+			vres = screen.height;
+		}
+		else {
+			hres = screen.width * readCookie("initialRatio"); // scaling resolution by zoom factor (value in cookie)
+			vres = screen.height * readCookie("initialRatio");
+		}
 	}
 
 	// Only posts data to database if not Tor Browser, to avoid excessive incorrect data
@@ -149,7 +154,6 @@ onload = function() {
  * Returns void.
  * Sends POST request to database to add data.
  */
-/*
 function SubForm() {
     $.ajax({
 	    url:'/insertResolution',
@@ -160,13 +164,12 @@ function SubForm() {
 	    }
 	});
 }
-*/
 
 /*
  * Returns void.
  * Helps with creation of POST request for database and back-end using a hidden form.
  */
-/*function createForm(path, params, method) {
+function createForm(path, params, method) {
     method = method || "post"; // Set method to post by default if not specified.
 
     // The rest of this code assumes you are not using a library.
@@ -189,4 +192,3 @@ function SubForm() {
     document.body.appendChild(form);
     //form.submit();
 }
-*/
